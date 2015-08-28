@@ -6,7 +6,8 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class Title_Validation_CSV {
 
@@ -21,7 +22,7 @@ public class Title_Validation_CSV {
 		
 		
 		br = new BufferedReader(new FileReader(csvFile));
-		WebDriver driver = new FirefoxDriver();  
+		WebDriver driver = new HtmlUnitDriver();  
 		while ((line = br.readLine()) != null) {
 			
 			String[] csv = line.split(SplitBy);
